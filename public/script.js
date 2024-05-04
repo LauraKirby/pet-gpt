@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
             if (response.ok) {
                 const data = await response.json();
+                displayQuestion(questionText); 
                 displayAnswer(data.answer);
             } else {
                 console.error("Server responded with error:", response.statusText);
@@ -39,6 +40,13 @@ document.addEventListener("DOMContentLoaded", function() {
         } catch (error) {
             console.error("Error sending question to server:", error);
         }
+    }
+
+    function displayQuestion(questionText) {
+        const questionElement = document.createElement("li");
+        questionElement.textContent = questionText;
+        const questionList = document.getElementById("question-list");
+        questionList.appendChild(questionElement);
     }
 
     function displayAnswer(answerText) {
