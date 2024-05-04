@@ -20,4 +20,8 @@ router.use(UserRouter);
 
 app.use("/", router);
 
+app.get("/", (req, res) => {
+  res.send("hello world 2");
+});
+
 export { app };
