@@ -27,7 +27,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: "hi"
+                body: JSON.stringify({ question: questionText }) // Stringify the JSON object
+
             });
             if (response.ok) {
                 const data = await response.json();
