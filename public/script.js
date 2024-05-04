@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
             if (response.ok) {
                 const data = await response.json();
-                displayQuestion(questionText); 
+                displayQuestion(data.question); 
                 displayAnswer(data.answer);
             } else {
                 console.error("Server responded with error:", response.statusText);
