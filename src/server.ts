@@ -18,10 +18,12 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 const router = Router();
 router.use(UserRouter);
 
+app.set("view engine", "ejs");
+
 app.use("/", router);
 
 app.get("/", (req, res) => {
-  res.send("hello world 2");
+  res.render("index", { firstName: "Ari" });
 });
 
 export { app };
