@@ -2,6 +2,7 @@ import cors from "cors";
 import express, { Router } from "express";
 import path from "node:path";
 import { FRONTEND_ALLOWED_ORIGINS } from "./api/config";
+import DogsRouter from "./api/routers/dogs.router";
 import QuestionsRouter from "./api/routers/questions.router";
 
 const app = express();
@@ -22,6 +23,7 @@ app.set("view engine", "ejs");
 
 const router = Router();
 router.use(QuestionsRouter);
+router.use(DogsRouter);
 
 app.use("/", router);
 
