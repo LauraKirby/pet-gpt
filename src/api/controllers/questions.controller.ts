@@ -6,7 +6,7 @@ const openai = new OpenAI({
 });
 
 export const GET = async (req: Request, res: Response) => {
-  res.render("index", { firstName: "Ari" });
+  res.render("index", { firstName: "Friend" });
 };
 
 export const POST = async (req: Request, res: Response) => {

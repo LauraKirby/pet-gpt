@@ -3,7 +3,6 @@ import express, { Router } from "express";
 import path from "node:path";
 import { FRONTEND_ALLOWED_ORIGINS } from "./api/config";
 import QuestionsRouter from "./api/routers/questions.router";
-import UserRouter from "./api/routers/users.router";
 
 const app = express();
 
@@ -22,7 +21,6 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.set("view engine", "ejs");
 
 const router = Router();
-router.use(UserRouter);
 router.use(QuestionsRouter);
 
 app.use("/", router);
