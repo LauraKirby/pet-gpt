@@ -17,15 +17,11 @@ export const POST = async (req: Request, res: Response) => {
   try {
     answer = await callChatGpt(question);
 
-    console.log("\n\n\n\n");
-    console.log(answer);
-    console.log("\n\n\n\n");
-
     if (answer?.error) {
       answer = answer.error.message;
     } else if (answer?.choices) {
-      answer = answer?.choices.message;
-      console.log(answer?.choices);
+      answer = answer?.choices[0].message.content;
+      console.log(answer);
     }
   } catch (error) {
     console.log(error);
