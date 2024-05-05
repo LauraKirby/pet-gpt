@@ -3,6 +3,7 @@ import { QuestionsController } from "../controllers/questions.controller";
 
 const router = Router();
 
-router.get("/questions", QuestionsController.POST);
+router.post("/", QuestionsController.POST);
+router.get("/", QuestionsController.GET);
 
 export default router;
