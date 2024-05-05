@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     async function submitDogInfo(breed, city, adoptionDate) {
         try {
-            const response = await fetch(`/dogs?breed=${breed}&city=${city}&adoptionDate=${adoptionDate}`, {
+            const response = await fetch(`/dogs?breed=${breed}&location=${city}&adoptionDate=${adoptionDate}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "text/html" // Set Content-Type header to text/html
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 const data = await response.text();
                 console.log("Dog info submitted successfully:", data);
                 // Extract parameters from the response data
-                const url = `http://localhost:4000/dogs?breed=${breed}&city=${city}&adoptionDate=${adoptionDate}`;
+                const url = `http://localhost:4000/dogs?breed=${breed}&location=${city}&adoptionDate=${adoptionDate}`;
                 window.location.href = url;
                 console.log("loading window", data);
 
