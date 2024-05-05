@@ -15,7 +15,6 @@ export const POST = async (req: Request, res: Response) => {
       apiKey: process.env["OPENAI_API_KEY"],
     });
 
-    const q = "dog behavior problems";
     answer = await openai.chat.completions.create({
       messages: [{ role: "user", content: question }],
       model: "gpt-3.5-turbo-16k",
