@@ -1,11 +1,62 @@
 document.addEventListener("DOMContentLoaded", function() {
     console.log("we are in the js file");
     const questionForm = document.getElementById("question-form");
+    const dogForm = document.getElementById("dog-form");
     const questionInput = document.getElementById("question-input");
     const answerContainer = document.getElementById("answer-container");
+    const breedInput = document.getElementById("breed-select");
+    const adoptionDate = document.getElementById("adoption-date");
+    const cityInput = document.getElementById("city-select");
+    console.log(cityInput);
+
+    const submitButton = document.getElementById("submit_info");
+    console.log(submitButton);
+    submitButton.addEventListener("click", async function(event) {
+        console.log("we are in the listener for the form submission");
+        event.preventDefault(); // Prevent the default button click behavior
+
+        const breed = breedInput.value;
+        const city = cityInput.value;
+        const adoptionDateValue = adoptionDate.value;
+
+        if (breed.trim() !== "" && city.trim() !== "" && adoptionDateValue.trim() !== "") {
+            await submitDogInfo(breed, city, adoptionDateValue); // Wait for the submission of the data
+            // Clear the input fields after submitting
+            breedInput.value = "";
+            cityInput.value = "";
+            adoptionDate.value = "";
+        } else {
+            console.warn("Please enter all information before submitting.");
+        }
+    });
+
+    async function submitDogInfo(breed, city, adoptionDate) {
+        try {
+            const response = await fetch(`/dogs?breed=${breed}&city=${city}&adoptionDate=${adoptionDate}`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "text/html" // Set Content-Type header to text/html
+                }
+            });
+            if (response.ok) {
+                const data = await response.text();
+                console.log("Dog info submitted successfully:", data);
+                // Extract parameters from the response data
+                const url = `http://localhost:4000/dogs?breed=${breed}&city=${city}&adoptionDate=${adoptionDate}`;
+
+                window.location.href = url;
+                console.log("loading window", data);
+
+            } else {
+                console.error("Server responded with error:", response.statusText);
+            }
+        } catch (error) {
+            console.error("Error sending dog info to server:", error);
+        }
+    }
 
     questionForm.addEventListener("submit", function(event) {
-        console.log("we are in the listener");
+        console.log("we are in the listener for question submit");
         event.preventDefault(); // Prevent the default form submission
 
         const questionText = questionInput.value;
@@ -28,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({ question: questionText }) // Stringify the JSON object
-
             });
             if (response.ok) {
                 const data = await response.json();
