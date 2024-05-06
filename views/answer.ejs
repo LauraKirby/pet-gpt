@@ -22,7 +22,19 @@
         <img src="default_image.jpg" alt="Default Image" class="left-image" />
         <% } %>
       </section>
-      <section id="answers"></section>
+
+      <section id="topics">
+        <table>
+          <% for(var topic in topics) { %>
+          <tr>
+            <td>
+              <button type="button" id="<%= topic %>"><%= topic %></button>
+            </td>
+          </tr>
+          <% } %>
+        </table>
+      </section>
+
       <section id="Any more questions?">
         <h2>Any more questions?</h2>
         <form id="question-form">
@@ -37,11 +49,10 @@
           <!-- Questions will be dynamically added here -->
         </ul>
       </section>
-      <section id="answers">
-        <div id="answer-container">
-          <!-- Answers will be displayed here -->
-        </div>
-      </section>
+
+      <div id="answer-container">
+        <!-- Answers will be displayed here -->
+      </div>
     </main>
     <footer>
       <p>&copy; PetGPT 2024</p>
