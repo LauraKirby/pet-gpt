@@ -14,8 +14,30 @@
       <script src="../answer_script.js"></script>
       <section id="How can I help?">
         <h2>Welcoming your <%= breed %> home</h2>
+        <% if (breed === 'poodle') { %>
+          <img src="Doodle_Puppy.png" class="left-image">
+        <% } else if (breed === 'golden retriever') { %>
+          <img src="Golden_Puppies.png" class="left-image">
+        <% } else { %>
+          <img src="default_image.jpg" alt="Default Image" class="left-image">
+        <% } %>
       </section>
       <section id="answers"></section>
+      <section id="Any more questions?">
+        <h2>Any more questions? </h2>
+        <form id="question-form">
+            <input type="text" id="question-input" placeholder="Enter your question...">
+            <button type="submit">Submit</button>
+        </form>
+        <ul id="question-list">
+            <!-- Questions will be dynamically added here -->
+        </ul>
+    </section>
+    <section id="answers">
+        <div id="answer-container">
+            <!-- Answers will be displayed here -->
+        </div>
+    </section>
     </main>
     <footer>
       <p>&copy; PetGPT 2024</p>
