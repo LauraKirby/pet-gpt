@@ -83,6 +83,7 @@ footer {
 }
 
 #dog-adoption-info {
+    font-family: 'Roboto', sans-serif;
     background-color: #fff;
     padding: 20px;
     border-radius: 20px; /* Adjusted border-radius to match other sections */
