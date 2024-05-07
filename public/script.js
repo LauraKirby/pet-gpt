@@ -11,24 +11,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const submitButton = document.getElementById("submit_info");
   console.log(submitButton);
-  // submitButton.addEventListener("click", async function(event) {
-  //     console.log("we are in the listener for the form submission");
-  //     event.preventDefault(); // Prevent the default button click behavior
+  submitButton.addEventListener("click", async function (event) {
+    console.log("we are in the listener for the form submission");
+    event.preventDefault(); // Prevent the default button click behavior
 
-  //     const breed = breedInput.value;
-  //     const city = cityInput.value;
-  //     const adoptionDateValue = adoptionDate.value;
+    const breed = breedInput.value;
+    const city = cityInput.value;
+    const adoptionDateValue = adoptionDate.value;
 
-  //     if (breed.trim() !== "" && city.trim() !== "" && adoptionDateValue.trim() !== "") {
-  //         await submitDogInfo(breed, city, adoptionDateValue); // Wait for the submission of the data
-  //         // Clear the input fields after submitting
-  //         breedInput.value = "";
-  //         cityInput.value = "";
-  //         adoptionDate.value = "";
-  //     } else {
-  //         console.warn("Please enter all information before submitting.");
-  //     }
-  // });
+    if (
+      breed.trim() !== "" &&
+      city.trim() !== "" &&
+      adoptionDateValue.trim() !== ""
+    ) {
+      await submitDogInfo(breed, city, adoptionDateValue); // Wait for the submission of the data
+      // Clear the input fields after submitting
+      breedInput.value = "";
+      cityInput.value = "";
+      adoptionDate.value = "";
+    } else {
+      console.warn("Please enter all information before submitting.");
+    }
+  });
 
   async function submitDogInfo(breed, city, adoptionDate) {
     try {
