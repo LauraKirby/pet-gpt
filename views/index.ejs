@@ -6,64 +6,38 @@
       <h1>PetGPT</h1>
       <h2>For First-Time Dog Owners</h2>
     </header>
-    <div class="container">
-      <!-- user quiz -->
-      <div class="row">
-        <div row="col s12">
-          <div class="card" id="dog-adoption-info">
-            <form id="dog-form">
-              <div class="card-image">
-                <img src="/Header_Puppies.png" class="centered-image" />
-              </div>
-              <div class="card-content">
-                <span class="card-title">Tell us about your dog</span>
+    <main>
+      <section id="dog-adoption-info">
+        <form id="dog-form">
+          <img src="/Header_Puppies.png" class="centered-image" />
+          <h1>Tell us about your dog!</h1>
+          <label for="breed-select">Select a Dog Breed:</label>
+          <select id="breed-select">
+            <option value="poodle">Poodle</option>
+            <option value="golden_retriever">Golden Retriever</option>
+            <!-- Add more options for different dog breeds -->
+          </select>
+          <label for="city-select">Select a City:</label>
+          <select id="city-select">
+            <option value="san_francisco">San Francisco</option>
+            <option value="arnold">Arnold</option>
+            <option value="cupertino">Cupertino</option>
+            <!-- Add more options for different cities -->
+          </select>
 
-                <div class="row">
-                  <div class="input-field col s12">
-                    <select id="breed-select">
-                      <option value="poodle">Poodle</option>
-                      <option value="golden_retriever">Golden Retriever</option>
-                      <!-- Add more options for different dog breeds -->
-                    </select>
-                    <label for="breed-select">Select a Dog Breed:</label>
-                  </div>
-
-                  <div class="input-field col s12">
-                    <select id="city-select">
-                      <option value="san_francisco">San Francisco</option>
-                      <option value="arnold">Arnold</option>
-                      <option value="cupertino">Cupertino</option>
-                      <!-- Add more options for different cities -->
-                    </select>
-                    <label for="city-select">Select a City:</label>
-                  </div>
-
-                  <div class="input-field col s12">
-                    <select id="adoption-date">
-                      <option value="1_day_away">1 day away!</option>
-                      <option value="1_week_away">1 week away</option>
-                      <option value="1_month_away">1 month away</option>
-                      <option value="6_months_to_go">6 months to go</option>
-                      <option value="I_already_got_them">
-                        I already got them!
-                      </option>
-                      <!-- Add more options for different cities -->
-                    </select>
-                    <label for="adoption-date"
-                      >When will your pup arrive?</label
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="card-action">
-                <button class="btn" id="submit_info" type="button">
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+          <label for="adoption-date">When will your pup arrive?</label>
+          <select id="adoption-date">
+            <option value="1_day_away">1 day away!</option>
+            <option value="1_week_away">1 week away</option>
+            <option value="1_month_away">1 month away</option>
+            <option value="6_months_to_go">6 months to go</option>
+            <option value="I_already_got_them">I already got them!</option>
+            <!-- Add more options for different cities -->
+          </select>
+          <button class="btn" id="submit_info" type="button">Submit</button>
+        </form>
+      </section>
+ 
 
       <!-- ask ChatGPT a question -->
       <div class="row">
