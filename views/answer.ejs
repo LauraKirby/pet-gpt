@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dog Owner Q&A</title>
-    <link rel="stylesheet" href="../styles.css" />
-  </head>
+  <%- include('head.ejs') %>
   <body>
     <header>
       <h1>PetGPT: Answers</h1>
+      <button type="button" id="view-all-topics">View All Topics</button>
     </header>
     <main>
-      <script src="../answer_script.js"></script>
       <section id="How can I help?">
         <h2>Welcoming your <%= breed %> home</h2>
         <img src="<%= breed %>.png" class="left-image" />
@@ -22,7 +17,9 @@
           <% for(var topic in topics) { %>
           <tr>
             <td>
-              <button type="button" id="<%= topic %>"><%= topic %></button>
+              <button class="btn" type="button" id="<%= topic %>">
+                <%= topic %>
+              </button>
             </td>
           </tr>
           <% } %>
@@ -48,8 +45,7 @@
         <!-- Answers will be displayed here -->
       </div>
     </main>
-    <footer>
-      <p>&copy; PetGPT 2024</p>
-    </footer>
+    <%- include('footer.ejs') %>
   </body>
 </html>
+<%- include('scripts.ejs') %>

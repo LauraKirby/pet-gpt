@@ -20,7 +20,7 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(express.static(path.join(__dirname, "../public")));
 
 app.set("view engine", "ejs");
-
+app.set("views", "./views");
 const router = Router();
 router.use(QuestionsRouter);
 router.use(DogsRouter);
