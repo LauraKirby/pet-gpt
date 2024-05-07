@@ -102,3 +102,6 @@ footer {
   max-width: 100%; /* Ensure the image does not exceed its container's width */
   max-height: 500px; /* Limit the maximum height of the image */
 }
+.btn-fixed-width {
+    width: 150px; /* Adjust the width as needed */
+}

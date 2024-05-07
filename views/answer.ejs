@@ -14,30 +14,24 @@
   </header>
     <div class="container">
       <!-- welcome message with photo -->
+
+      <!-- list all topics -->
       <div class="row" id="about-supplies" display="none">
         <div class="col s12">
           <div class="card" id="topics">
             <h2>Welcoming your <%= breed %> home</h2>
             <img src="<%= breed %>.png" class="left-image" />
-          </div>
-        </div>
-      </div>
-
-      <!-- list all topics -->
-      <div class="row" id="about-supplies" display="none">
-        <button class="btn waves-effect waves-light" id="view-all-topics" type="button">View All Topics</button>
-        <div class="col s12">
-          <div class="card" id="topics">
             <table>
               <% for(var topic in topics) { %>
-              <tr>
                 <td>
-                  <button class="btn waves-effect waves-light" type="button" id="<%= topic %>">
+                  <button class="btn waves-effect waves-light btn-fixed-width" type="button" id="<%= topic %>">
                     <%= topic %>
                   </button>
                 </td>
-              </tr>
               <% } %>
+              <td>
+                <button class="btn waves-effect waves-light btn-fixed-width" id="view-all-topics" type="button">View All Topics</button>
+              </td>
             </table>
           </div>
         </div>
@@ -74,7 +68,7 @@
                     placeholder="Enter your question..."
                   />
                   <div class="card-action">
-                    <button class="btn waves-effect waves-light" type="button">Submit</button>
+                    <button class="btn waves-effect waves-light btn-fixed-width" type="button">Submit</button>
                   </div>
                 </form>
               </div>
