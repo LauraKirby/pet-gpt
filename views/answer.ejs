@@ -14,13 +14,7 @@
       <script src="../answer_script.js"></script>
       <section id="How can I help?">
         <h2>Welcoming your <%= breed %> home</h2>
-        <% if (breed === 'poodle') { %>
-        <img src="Doodle_Puppy.png" class="left-image" />
-        <% } else if (breed === 'golden retriever') { %>
-        <img src="Golden_Puppies.png" class="left-image" />
-        <% } else { %>
-        <img src="default_image.jpg" alt="Default Image" class="left-image" />
-        <% } %>
+        <img src="<%= breed %>.png" class="left-image" />
       </section>
 
       <section id="topics">
