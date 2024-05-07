@@ -5,9 +5,16 @@
   "topics": {
     "supplies": [
       {
-        "crate": "a comfy place for pups",
-        "food": "sustenance",
-        "toothbrush": "fresh breath"
+        "name": "crate",
+        "purpose": "a comfy place for pups"
+      },
+      {
+        "name": "food",
+        "purpose": "dental health"
+      },
+      {
+        "name": "food",
+        "purpose": "sustenance"
       }
     ],
     "medical": [

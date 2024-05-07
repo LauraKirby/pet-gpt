@@ -4,48 +4,98 @@
   <body>
     <header>
       <h1>PetGPT: Answers</h1>
-      <button type="button" id="view-all-topics">View All Topics</button>
+      <button class="btn" type="button" id="view-all-topics">
+        View All Topics
+      </button>
     </header>
-    <main>
-      <section id="How can I help?">
-        <h2>Welcoming your <%= breed %> home</h2>
-        <img src="<%= breed %>.png" class="left-image" />
-      </section>
-
-      <section id="topics">
-        <table>
-          <% for(var topic in topics) { %>
-          <tr>
-            <td>
-              <button class="btn" type="button" id="<%= topic %>">
-                <%= topic %>
-              </button>
-            </td>
-          </tr>
-          <% } %>
-        </table>
-      </section>
-
-      <section id="Any more questions?">
-        <h2>Any more questions?</h2>
-        <form id="question-form">
-          <input
-            type="text"
-            id="question-input"
-            placeholder="Enter your question..."
-          />
-          <button type="submit">Submit</button>
-        </form>
-        <ul id="question-list">
-          <!-- Questions will be dynamically added here -->
-        </ul>
-      </section>
-
-      <div id="answer-container">
-        <!-- Answers will be displayed here -->
+    <div class="container">
+      <!-- welcome message with photo -->
+      <div class="row" id="about-supplies" display="none">
+        <div class="col s12">
+          <div class="card" id="topics">
+            <h2>Welcoming your <%= breed %> home</h2>
+            <img src="<%= breed %>.png" class="left-image" />
+          </div>
+        </div>
       </div>
-    </main>
+
+      <!-- list all topics -->
+      <div class="row" id="about-supplies" display="none">
+        <div class="col s12">
+          <div class="card" id="topics">
+            <table>
+              <% for(var topic in topics) { %>
+              <tr>
+                <td>
+                  <button class="btn" type="button" id="<%= topic %>">
+                    <%= topic %>
+                  </button>
+                </td>
+              </tr>
+              <% } %>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- should be hidden topic description -->
+      <div class="row" id="about-supplies" display="none">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title">Supplies</span>
+              <% for(var supply of topics.supplies) { %>
+              <ul>
+                <li>Name: <%= supply.name %></li>
+                <li>Purpose: <%= supply.purpose %></li>
+              </ul>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ask ChatGPT a question -->
+      <div class="row">
+        <div row="col s12">
+          <div class="card" id="How can I help?">
+            <div class="row">
+              <div class="col s12">
+                <span class="card-title">Questions</span>
+                <form id="question-form">
+                  <input
+                    type="text"
+                    id="question-input"
+                    placeholder="Enter your question..."
+                  />
+                  <div class="card-action">
+                    <button class="btn" type="submit">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col s12">
+                <ul id="question-list">
+                  <!-- Questions will be dynamically added here -->
+                </ul>
+
+                <div id="answer-container">
+                  <!-- Answers will be displayed here -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <%- include('footer.ejs') %>
   </body>
   <script src="../answer_script.js"></script>
+  <script
+    type="text/javascript"
+    src="materialize/js/materialize.min.js"
+  ></script>
 </html>

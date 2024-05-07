@@ -13,21 +13,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const suppliesTopic = document.getElementById("supplies");
   const trainingTopic = document.getElementById("training");
   const showAllTopics = document.getElementById("view-all-topics");
+  const topicsContainer = document.getElementById("topics");
+  const suppliesDescription = document.getElementById("about-supplies");
+  showAllTopics.addEventListener("click", async function (event) {
+    topicsContainer.style.display = "block";
+  });
 
   medicalTopic.addEventListener("click", async function (event) {
-    event.preventDefault(); // Prevent the default form submission
-    console.log("medical clicked");
-    // hide all topics
-    console.log("breedTopic: ", breedTopic);
-    breedTopic.style.display = "none";
-    console.log("breedTopic: ", breedTopic);
-    communityTopic.style.display = "none";
-    medicalTopic.style.display = "none";
-    suppliesTopic.style.display = "none";
-    trainingTopic.style.display = "none";
-    breedTopic.classList.add("hide");
-    // back, show all topics
-    const questionText = questionInput.value;
+    topicsContainer.style.display = "none";
+    showSupplyDetails();
   });
 
   showAllTopics.addEventListener("click", function (event) {
@@ -95,5 +89,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const answerElement = document.createElement("p");
     answerElement.textContent = answerText;
     answerContainer.appendChild(answerElement);
+  }
+
+  function showSupplyDetails() {
+    suppliesDescription.style.display = "block";
   }
 });

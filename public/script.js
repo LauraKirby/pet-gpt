@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const cityInput = document.getElementById("city-select");
   console.log(cityInput);
 
+  var elems = document.querySelectorAll("select");
+  const options = [1, 2, 3];
+  var instances = M.FormSelect.init(elems, options);
+
   const submitButton = document.getElementById("submit_info");
   console.log(submitButton);
   submitButton.addEventListener("click", async function (event) {
