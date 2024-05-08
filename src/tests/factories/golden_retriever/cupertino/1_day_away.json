@@ -6,15 +6,35 @@
     "supplies": [
       {
         "name": "crate",
-        "purpose": "a comfy place for pups"
+        "purpose": "A comfortable place for your puppy to rest, and will be helpful with potty training"
       },
       {
-        "name": "food",
-        "purpose": "dental health"
+        "name": "Puppy Pads or Training Pads",
+        "purpose": "Useful for house training"
       },
       {
-        "name": "food",
-        "purpose": "sustenance"
+        "name": "Food and Water Bowls",
+        "purpose": "Stainless steel or ceramic bowls are recommended"
+      },
+      {
+        "name": "Puppy Food",
+        "purpose": "High-quality puppy food suitable for their age and size"
+      },
+      {
+        "name": "Poop Bags",
+        "purpose": "For cleaning up after your puppy during walks"
+      },
+      {
+        "name": "ID Tag",
+        "purpose": "Important for identification in case they get lost."
+      },
+      {
+        "name": "Puppy Food",
+        "purpose": "High-quality puppy food suitable for their age and size. Ask your breeder or shelter for the food they use and slowly wean"
+      },
+      {
+        "name": "Training Treats",
+        "purpose": "Small, tasty treats for training sessions"
       }
     ],
     "medical": [
