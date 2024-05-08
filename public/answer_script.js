@@ -74,16 +74,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   
     function displayQuestion(questionText) {
-      const questionElement = document.createElement("li");
-      questionElement.textContent = questionText;
-      const questionList = document.getElementById("question-list");
-      questionList.appendChild(questionElement);
+        const questionList = document.getElementById("question-list");
+        questionList.innerHTML = `<li>${questionText}</li>`;
     }
   
     function displayAnswer(answerText) {
-      const answerElement = document.createElement("p");
-      answerElement.textContent = answerText;
-      answerContainer.appendChild(answerElement);
+        const answerContainer = document.getElementById("answer-container");
+        answerContainer.innerHTML = `<p>${answerText}</p>`;
     }
   
     function showSupplyDetails() {
