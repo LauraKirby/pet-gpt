@@ -25,6 +25,17 @@ document.addEventListener("DOMContentLoaded", function () {
       topicsContainer.style.display = "none";
       showSupplyDetails();
     });
+
+    suppliesTopic.addEventListener("click", function (event) {
+        topicsContainer.style.display = "none";
+        showSupplyDetails();
+    });
+
+    communityTopic.addEventListener("click", function (event) {
+        topicsContainer.style.display = "none";
+        showSupplyDetails();
+    });
+    
   
     // Event listener for form submission
     questionForm.addEventListener("click", function (event) {
