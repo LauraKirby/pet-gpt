@@ -13,16 +13,20 @@
       </nav>
     </header>
     <div class="container">
+
+
+      <!-- welcome message and topic selection row -->
       <div class="row">
         <div class="col s12">
           <div class="card" id="topics">
-            <!-- welcome message with photo -->
+            <!-- inner welcome message row -->
             <div class="row">
               <div class="col s12">
                 <h4>Get ready to welcome your <%= breed %> puppy home</h4>
               </div>
-            </div>
+            </div> <!-- close inner welcome message row -->
 
+            <!-- welcome image row -->
             <div class="row">
               <div class="col s12">
                 <div>
@@ -34,10 +38,9 @@
                   />
                 </div>
               </div>
-            </div>
+            </div> <!-- close welcome image row -->
 
-            <!-- buttons for topics -->
-
+            <!-- buttons for topics row -->
             <div class="row">
               <div class="col s12 center-align">
                 <div class="card-action">
@@ -55,12 +58,12 @@
                   <% } %>
                 </div>
               </div>
-            </div>
+            </div> <!-- close buttons for topics row -->
           </div>
         </div>
-      </div>
+      </div> <!-- close welcome message and topic selection row -->
 
-      <!-- should be hidden topic description -->
+      <!-- hidden supplies topic description -->
       <div class="row" id="about-supplies" display="none">
         <div class="col s12">
           <div class="card">
@@ -75,9 +78,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> <!-- close hidden supplies topic description -->
 
-      <!-- ask ChatGPT a question -->
+      <!-- ask ChatGPT a question row -->
       <div class="row">
         <div row="col s12">
           <div class="card" id="How can I help?">
@@ -114,6 +117,8 @@
             </div>
           </div>
         </div>
+      </div> <!-- close ChatGPT a question row -->
+    </div> <!-- close 'container' div -->
       
     <%- include('footer.ejs') %>
   </body>
