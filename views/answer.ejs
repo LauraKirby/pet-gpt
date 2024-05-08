@@ -4,37 +4,58 @@
   <body>
     <header>
       <nav class="green darken-2">
-          <div class="nav-wrapper">
-              <a href="#" class="brand-logo">PetGPT: Answers</a>
-              <ul id="nav-mobile" class="right hide-on-med-and-down">
-                  <li><a href="#">For First-Time Dog Owners</a></li>
-              </ul>
-          </div>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">PetGPT: Answers</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">For First-Time Dog Owners</a></li>
+          </ul>
+        </div>
       </nav>
-  </header>
+    </header>
     <div class="container">
-      <!-- welcome message with photo -->
-
-      <!-- list all topics -->
-      <div class="row" id="about-supplies" display="none">
+      <div class="row">
         <div class="col s12">
           <div class="card" id="topics">
-            <h4>Get ready to welcome your <%= breed %> puppy home</h4>
-            <div style="text-align: center;">
-              <img src="<%= breed %>.png" alt="Breed Image" class="left-image" style="display: inline-block;">
+            <!-- welcome message with photo -->
+            <div class="row">
+              <div class="col s12">
+                <h4>Get ready to welcome your <%= breed %> puppy home</h4>
+              </div>
             </div>
-            <table>
-              <% for(var topic in topics) { %>
-                <td>
-                  <button class="btn waves-effect waves-light btn-fixed-width" type="button" id="<%= topic %>">
+
+            <div class="row">
+              <div class="col s12">
+                <div>
+                  <img
+                    src="<%= breed %>.png"
+                    alt="Breed Image"
+                    class="left-image"
+                    style="display: inline-block"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- buttons for topics -->
+
+            <div class="row">
+              <div class="col s12 center-align">
+                <div class="card-action">
+                  <!-- list all topics -->
+                  <% for(var topic in topics) { %>
+
+                  <button
+                    class="btn waves-effect waves-light btn-fixed-width topic-button"
+                    type="button"
+                    id="<%= topic %>"
+                  >
                     <%= topic %>
                   </button>
-                </td>
-              <% } %>
-              <td>
-                <button class="btn waves-effect waves-light btn-fixed-width" id="view-all-topics" type="button">View All Topics</button>
-              </td>
-            </table>
+
+                  <% } %>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -70,7 +91,13 @@
                     placeholder="Enter your question..."
                   />
                   <div class="card-action">
-                    <button class="btn waves-effect waves-light btn-fixed-width" id="submit" type="button">Submit</button>
+                    <button
+                      class="btn waves-effect waves-light btn-fixed-width"
+                      id="submit"
+                      type="button"
+                    >
+                      Submit
+                    </button>
                   </div>
                 </form>
               </div>

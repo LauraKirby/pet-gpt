@@ -35,26 +35,24 @@ h2 {
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 #question-form {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 #question-input {
-    flex: 1;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    font-size: 1.2em;
-    margin-right: 10px; /* Add margin to the right of the input field */
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.2em;
+  margin-right: 10px; /* Add margin to the right of the input field */
 }
-
-
 
 footer {
   background-color: #333;
@@ -77,16 +75,16 @@ footer {
 }
 
 #dog-adoption-info h2 {
-    font-size: 1.8em;
-    color: #333;
-    margin-top: 0;
+  font-size: 1.8em;
+  color: #333;
+  margin-top: 0;
 }
 
 #dog-adoption-info select,
 #dog-adoption-info input[type="date"] {
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 1.2em;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1.2em;
 }
 
 .centered-image {
@@ -102,6 +100,11 @@ footer {
   max-width: 100%; /* Ensure the image does not exceed its container's width */
   max-height: 500px; /* Limit the maximum height of the image */
 }
+
 .btn-fixed-width {
-    width: 150px; /* Adjust the width as needed */
+  width: 150px; /* Adjust the width as needed */
+}
+
+.topic-button {
+  margin: 7px;
 }
