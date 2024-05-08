@@ -11,15 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const medicalTopic = document.getElementById("medical");
     const suppliesTopic = document.getElementById("supplies");
     const trainingTopic = document.getElementById("training");
-    const showAllTopics = document.getElementById("view-all-topics");
-    const topicsContainer = document.getElementById("topics");
     const suppliesDescription = document.getElementById("about-supplies");
-    
-    // Event listener for "View All Topics" button
-    showAllTopics.addEventListener("click", function (event) {
-      topicsContainer.style.display = "block";
-    });
-  
+
     // Event listener for "Medical" topic button
     medicalTopic.addEventListener("click", function (event) {
       topicsContainer.style.display = "none";
