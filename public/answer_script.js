@@ -18,8 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const suppliesDescription = document.getElementById("about-supplies");
   const trainingDescription = document.getElementById("about-training");
 
-  const topicsContainer = document.getElementById("topics");
-
   // Event listener for "Breed Details" topic button
   breedTopic.addEventListener("click", function (event) {
     event.preventDefault(); 
