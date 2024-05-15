@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("in the async function");
     console.log(questionText);
     try {
-      const response = await fetch("https://pet-gpt.render.com/", {
+      const response = await fetch("https://pet-gpt.render.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
