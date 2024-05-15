@@ -2,24 +2,16 @@
 <html lang="en">
 <head>
     <%- include('head.ejs') %>
-    <!-- MaterializeCSS CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <style>
-        /* Custom styles specific to your project */
-        /* Add your custom styles here */
-    </style>
 </head>
 <body>
-    <header>
-        <nav class="green darken-2">
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo">PetGPT</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#">For First-Time Dog Owners</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="/" class="center brand-logo">PetGPT</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>For first-time pet owners.</li>
+            </ul>
+        </div>
+    </nav>
     <main class="container">
         <div class="row" id="dog-adoption-info">
             <form id="dog-form" method="GET" action="/dogs">

@@ -5,16 +5,11 @@ body {
   background-color: #f8f8f8; /* Warmer background color */
 }
 
-header {
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
 
-header h1 {
+/* header h1 {
   margin: 0;
   font-size: 2.5em;
-}
+} */
 
 main {
   padding: 10px 20px;
@@ -27,16 +22,6 @@ main {
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Increased shadow */
   transition: box-shadow 0.3s ease;
   margin-bottom: 20px;
-}
-
-h2 {
-  margin-top: 10;
-  font-size: 1.5em;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
 }
 
 #question-form {
@@ -107,4 +92,12 @@ footer {
 
 .topic-button {
   margin: 7px;
+}
+
+nav {
+  background: #26a69a !important;
+}
+
+#nav-mobile {
+  padding-right: 12px;
 }
