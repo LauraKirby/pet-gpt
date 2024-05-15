@@ -40,25 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function submitDogInfo(breed, city, adoptionDate) {
     try {
-      const response = await fetch(
-        `/dogs?breed=${breed}&location=${city}&adoptionDate=${adoptionDate}`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "text/html", // Set Content-Type header to text/html
-          },
-        }
-      );
-      if (response.ok) {
-        const data = await response.text();
-        console.log("Dog info submitted successfully:", data);
-        // Extract parameters from the response data
-        const url = `https://pet-gpt.onrender.com/dogs?breed=${breed}&location=${city}&adoptionDate=${adoptionDate}`;
-        window.location.href = url;
-        console.log("loading window", data);
-      } else {
-        console.error("Server responded with error:", response.statusText);
-      }
+      const currentUrl = window.location.href
+      const currentUrlWithParams = `${currentUrl}dogs?breed=${breed}&location=${city}&adoptionDate=${adoptionDate}`
+      window.location.href = currentUrlWithParams
     } catch (error) {
       console.error("Error sending dog info to server:", error);
     }
