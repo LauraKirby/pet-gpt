@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const questionText = questionInput.value;
     if (questionText.trim() !== "") {
+      console.log("submit question")
       submitQuestion(questionText);
       questionInput.value = ""; // Clear the input field after submitting the question
     } else {
@@ -77,6 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         body: JSON.stringify({ question: questionText }), // Stringify the JSON object
       });
+      console.log('response: ')
+      console.log(response)
       if (response.ok) {
         const data = await response.json();
         displayQuestion(data.question);
