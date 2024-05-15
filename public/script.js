@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const data = await response.text();
         console.log("Dog info submitted successfully:", data);
         // Extract parameters from the response data
-        const url = `http://localhost:4000/dogs?breed=${breed}&location=${city}&adoptionDate=${adoptionDate}`;
+        const url = `https://pet-gpt.onrender.com/dogs?breed=${breed}&location=${city}&adoptionDate=${adoptionDate}`;
         window.location.href = url;
         console.log("loading window", data);
       } else {
